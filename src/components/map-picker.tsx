@@ -125,7 +125,7 @@ export function MapPicker({ latitude, longitude, onLocationChange, className }: 
               <MapPin className="w-8 h-8 mx-auto mb-2" />
               <p className="text-sm">Clique em qualquer lugar para definir a localização</p>
               <p className="text-xs text-gray-400 mt-1">
-                Este é um mapa de demonstração. Em produção, use Google Maps ou similar.
+                Este é um mapa de demonstração. Em produção, usa- se Google Maps ou similar.
               </p>
             </div>
           </div>
