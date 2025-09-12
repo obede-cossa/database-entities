@@ -1,7 +1,7 @@
 import api from "./axios"
 import type { EntityStatus } from "@/types/entities"
 
-const endpoint = "/entity-status"
+const endpoint = "/entity-statuses"
 
 export const entityStatusService = {
   getAll: async (): Promise<EntityStatus[]> => {

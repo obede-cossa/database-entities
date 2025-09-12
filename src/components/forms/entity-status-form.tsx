@@ -32,7 +32,7 @@ export function EntityStatusForm({ entityStatus, onSuccess }: EntityStatusFormPr
       : {
           name: "",
           description: "",
-          isactive: true,
+          active: true,
         },
   })
 
@@ -86,8 +86,8 @@ export function EntityStatusForm({ entityStatus, onSuccess }: EntityStatusFormPr
           <div className="flex items-center space-x-2">
             <Checkbox
               id="isactive"
-              checked={watch("isactive")}
-              onCheckedChange={(checked) => setValue("isactive", !!checked)}
+              checked={watch("active")}
+              onCheckedChange={(checked) => setValue("active", !!checked)}
             />
             <Label htmlFor="isactive">Ativo</Label>
           </div>

@@ -16,7 +16,7 @@ export interface EntityStatus {
   id: number
   name: string
   description?: string
-  isactive: boolean
+  active: boolean
 }
 
 // ActivityType entity
@@ -36,7 +36,7 @@ export interface EntityType {
   id: number
   name: string
   description?: string
-  isactive: boolean
+  active: boolean
 }
 
 // User entity
