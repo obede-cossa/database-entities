@@ -31,12 +31,12 @@ export function ActivityTypeForm({ activityType, onSuccess }: ActivityTypeFormPr
       ? { ...activityType }
       : {
           code: "",
-          classcode: "",
-          groupcode: "",
-          divisioncode: "",
-          sectioncode: "",
+          class_code: "",
+          group_code: "",
+          division_code: "",
+          section_code: "",
           description: "",
-          isactive: true,
+          is_active: true,
         },
   })
 
@@ -85,22 +85,22 @@ export function ActivityTypeForm({ activityType, onSuccess }: ActivityTypeFormPr
 
             <div>
               <Label htmlFor="classcode">Código de Classe</Label>
-              <Input id="classcode" {...register("classcode")} placeholder="Código de classe" />
+              <Input id="classcode" {...register("class_code")} placeholder="Código de classe" />
             </div>
 
             <div>
               <Label htmlFor="groupcode">Código de Grupo</Label>
-              <Input id="groupcode" {...register("groupcode")} placeholder="Código de grupo" />
+              <Input id="groupcode" {...register("group_code")} placeholder="Código de grupo" />
             </div>
 
             <div>
               <Label htmlFor="divisioncode">Código de Divisão</Label>
-              <Input id="divisioncode" {...register("divisioncode")} placeholder="Código de divisão" />
+              <Input id="divisioncode" {...register("division_code")} placeholder="Código de divisão" />
             </div>
 
             <div>
               <Label htmlFor="sectioncode">Código de Seção</Label>
-              <Input id="sectioncode" {...register("sectioncode")} placeholder="Código de seção" />
+              <Input id="sectioncode" {...register("section_code")} placeholder="Código de seção" />
             </div>
           </div>
 
@@ -117,8 +117,8 @@ export function ActivityTypeForm({ activityType, onSuccess }: ActivityTypeFormPr
           <div className="flex items-center space-x-2">
             <Checkbox
               id="isactive"
-              checked={watch("isactive")}
-              onCheckedChange={(checked) => setValue("isactive", !!checked)}
+              checked={watch("is_active")}
+              onCheckedChange={(checked) => setValue("is_active", !!checked)}
             />
             <Label htmlFor="isactive">Ativo</Label>
           </div>

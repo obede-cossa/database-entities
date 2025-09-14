@@ -3,12 +3,12 @@
 // Location entity
 export interface Location {
   id: number
-  parentid?: number
+  parent_id?: number
   name: string
-  isprovince: boolean
-  iscapitalcity: boolean
-  ismunicipality: boolean
-  isactive: boolean
+  is_province: boolean
+  is_capital_city: boolean
+  is_municipality: boolean
+  is_active: boolean
 }
 
 // EntityStatus entity
@@ -16,19 +16,19 @@ export interface EntityStatus {
   id: number
   name: string
   description?: string
-  active: boolean
+  is_active: boolean
 }
 
 // ActivityType entity
 export interface ActivityType {
   id: number
   code: string
-  classcode?: string
-  groupcode?: string
-  divisioncode?: string
-  sectioncode?: string
+  class_code?: string
+  group_code?: string
+  division_code?: string
+  section_code?: string
   description: string
-  isactive: boolean
+  is_active: boolean
 }
 
 // EntityType entity
@@ -36,7 +36,7 @@ export interface EntityType {
   id: number
   name: string
   description?: string
-  active: boolean
+  is_active: boolean
 }
 
 // User entity
@@ -54,7 +54,7 @@ export interface User {
   usertypeid: number
   entityid?: number
   mfaactive: boolean
-  isactive: boolean
+  is_active: boolean
   isdeleted: boolean
   createdon: string
   createdby: number
@@ -75,7 +75,7 @@ export interface EntityBranchHours {
 export interface EntityBranch {
   id: number
   entityid: number
-  ismain: boolean
+  is_main: boolean
   address?: string
   postcode?: string
   locationid: number
@@ -89,7 +89,7 @@ export interface EntityBranch {
   holidaysopentime?: string
   holidaysclosetime?: string
   entitystatusid: number
-  isdeleted: boolean
+  is_deleted: boolean
   createdon: string
   createdby: number
   lastupdatedon?: string

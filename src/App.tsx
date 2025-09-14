@@ -18,6 +18,7 @@ import { EntityTypeList } from "@/components/lists/entity-type-list"
 import { EntityList } from "@/components/lists/entities-list"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
+import { Toaster } from "./components/ui/toaster"
 
 const sections = [
   { id: "locations-create", label: "Criar Localização", component: LocationForm },
@@ -258,7 +259,7 @@ export default function HomePage() {
               </ul>
             </div>
 
-                        <div>
+            <div>
               <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Entidades</h3>
               <ul className="space-y-1">
                 <li>
@@ -374,7 +375,7 @@ export default function HomePage() {
             <Menu className="h-5 w-5" />
           </Button>
           <h2 className="text-lg font-semibold">{sections.find((s) => s.id === activeSection)?.label}</h2>
-          <div className="w-9" /> {/* Spacer for centering */}
+          <div className="w-9" />
         </div>
 
         <div className="p-4 lg:p-8">
@@ -388,10 +389,11 @@ export default function HomePage() {
               </p>
             </div>
 
-            <ActiveComponent key={`${activeSection}-${refreshKey}`} onSuccess={handleFormSuccess} />
+            <ActiveComponent key={`${activeSection}-${refreshKey}`} />
           </div>
         </div>
       </main>
+      <Toaster />
     </div>
   )
 }

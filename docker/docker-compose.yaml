@@ -25,6 +25,13 @@ services:
       DB_SCHEMA: taki
     networks:
       - default
+  frontend:
+    image: cossaobede/taki-frontend:1.0
+    ports:
+      - "5173:80"
+    depends_on:
+      - postgres
+      - app
 networks:
   default:
     name: taki-network

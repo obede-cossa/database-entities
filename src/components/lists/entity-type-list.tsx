@@ -122,8 +122,8 @@ export function EntityTypeList({ onSuccess }: EntityTypeListProps) {
                   <TableCell className="font-medium">{type.name}</TableCell>
                   <TableCell>{type.description || "-"}</TableCell>
                   <TableCell>
-                    <Badge variant={type.isactive ? "default" : "secondary"}>
-                      {type.isactive ? "Ativo" : "Inativo"}
+                    <Badge variant={type.active ? "default" : "secondary"}>
+                      {type.active ? "Ativo" : "Inativo"}
                     </Badge>
                   </TableCell>
                   <TableCell className="text-right">

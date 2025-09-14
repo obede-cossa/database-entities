@@ -122,8 +122,8 @@ export function EntityStatusList({ onSuccess }: EntityStatusListProps) {
                   <TableCell className="font-medium">{status.name}</TableCell>
                   <TableCell>{status.description || "-"}</TableCell>
                   <TableCell>
-                    <Badge variant={status.isactive ? "default" : "secondary"}>
-                      {status.isactive ? "Ativo" : "Inativo"}
+                    <Badge variant={status.active ? "default" : "secondary"}>
+                      {status.active ? "Ativo" : "Inativo"}
                     </Badge>
                   </TableCell>
                   <TableCell className="text-right">

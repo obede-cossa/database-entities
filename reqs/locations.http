@@ -1,0 +1,23 @@
+### Create Localtions
+POST http://localhost:8080/locations
+Content-Type: application/json
+
+{
+  "parent_id": 1,
+  "name": "Location",
+  "is_province": false,
+  "is_capital_city": true,
+  "is_municipality": true,
+  "is_active": true
+}
+
+<> 2025-09-13T023242.201.json
+<> 2025-09-13T021241.201.json
+<> 2025-09-13T021043.500.json
+<> 2025-09-13T020738.400.json
+
+### List Locations
+GET http://localhost:8080/locations
+Content-Type: application/json
+
+<> 2025-09-13T022025.200.json

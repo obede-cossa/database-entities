@@ -110,7 +110,7 @@ export function ActivityTypeList({ onSuccess }: ActivityTypeListProps) {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Nome</TableHead>
+                {/* <TableHead>Nome</TableHead> */}
                 <TableHead>Descrição</TableHead>
                 <TableHead>Status</TableHead>
                 <TableHead className="text-right">Ações</TableHead>
@@ -121,8 +121,8 @@ export function ActivityTypeList({ onSuccess }: ActivityTypeListProps) {
                 <TableRow key={type.id}>
                   <TableCell>{type.description || "-"}</TableCell>
                   <TableCell>
-                    <Badge variant={type.isactive ? "default" : "secondary"}>
-                      {type.isactive ? "Ativo" : "Inativo"}
+                    <Badge variant={type.active ? "default" : "secondary"}>
+                      {type.active ? "Ativo" : "Inativo"}
                     </Badge>
                   </TableCell>
                   <TableCell className="text-right">
