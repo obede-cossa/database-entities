@@ -43,7 +43,7 @@ export function UserForm({ user, onSuccess }: UserFormProps) {
           usertypeid: 1,
           entityid: undefined,
           mfaactive: false,
-          isactive: true,
+          is_active: true,
           isdeleted: false,
           createdon: new Date().toISOString()
         },
@@ -229,8 +229,8 @@ export function UserForm({ user, onSuccess }: UserFormProps) {
             <div className="flex items-center space-x-2">
               <Checkbox
                 id="isactive"
-                checked={watch("isactive")}
-                onCheckedChange={(checked) => setValue("isactive", !!checked)}
+                checked={watch("is_active")}
+                onCheckedChange={(checked) => setValue("is_active", !!checked)}
               />
               <Label htmlFor="isactive">Ativo</Label>
             </div>

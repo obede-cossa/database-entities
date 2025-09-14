@@ -32,7 +32,7 @@ export function EntityTypeForm({ entityType, onSuccess }: EntityTypeFormProps) {
       : {
           name: "",
           description: "",
-          active: true,
+          is_active: true,
         },
   })
 
@@ -86,8 +86,8 @@ export function EntityTypeForm({ entityType, onSuccess }: EntityTypeFormProps) {
           <div className="flex items-center space-x-2">
             <Checkbox
               id="isactive"
-              checked={watch("active")}
-              onCheckedChange={(checked) => setValue("active", !!checked)}
+              checked={watch("is_active")}
+              onCheckedChange={(checked) => setValue("is_active", !!checked)}
             />
             <Label htmlFor="isactive">Ativo</Label>
           </div>

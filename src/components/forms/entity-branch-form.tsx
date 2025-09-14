@@ -38,7 +38,7 @@ export function EntityBranchForm({ entityBranch, onSuccess }: EntityBranchFormPr
       ? { ...entityBranch }
       : {
         entityid: 1,
-        ismain: false,
+        is_main: false,
         address: "",
         postcode: "",
         locationid: 1,
@@ -52,7 +52,7 @@ export function EntityBranchForm({ entityBranch, onSuccess }: EntityBranchFormPr
         holidaysopentime: "",
         holidaysclosetime: "",
         entitystatusid: 1,
-        isdeleted: false,
+        is_deleted: false,
         createdon: new Date().toISOString(),
       },
   })
@@ -220,8 +220,8 @@ export function EntityBranchForm({ entityBranch, onSuccess }: EntityBranchFormPr
               <div className="flex items-center space-x-2">
                 <Checkbox
                   id="ismain"
-                  checked={watch("ismain")}
-                  onCheckedChange={(checked) => setValue("ismain", !!checked)}
+                  checked={watch("is_main")}
+                  onCheckedChange={(checked) => setValue("is_main", !!checked)}
                 />
                 <Label htmlFor="ismain">É Sucursal Principal</Label>
               </div>
@@ -238,8 +238,8 @@ export function EntityBranchForm({ entityBranch, onSuccess }: EntityBranchFormPr
               <div className="flex items-center space-x-2">
                 <Checkbox
                   id="isdeleted"
-                  checked={watch("isdeleted")}
-                  onCheckedChange={(checked) => setValue("isdeleted", !!checked)}
+                  checked={watch("is_deleted")}
+                  onCheckedChange={(checked) => setValue("is_deleted", !!checked)}
                 />
                 <Label htmlFor="isdeleted">Excluído</Label>
               </div>

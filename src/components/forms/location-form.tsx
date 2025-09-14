@@ -32,10 +32,10 @@ export function LocationForm({ location, onSuccess }: LocationFormProps) {
       ? { ...location }
       : {
           name: "",
-          isprovince: false,
-          iscapitalcity: false,
-          ismunicipality: false,
-          isactive: true,
+          is_province: false,
+          is_capital_city: false,
+          is_municipality: false,
+          is_active: true,
         },
   })
 
@@ -101,7 +101,7 @@ export function LocationForm({ location, onSuccess }: LocationFormProps) {
 
           <div>
             <Label htmlFor="parentid">Localização parente</Label>
-            <Select onValueChange={(value) => setValue("parentid", value ? Number.parseInt(value) : undefined)}>
+            <Select onValueChange={(value) => setValue("parent_id", value ? Number.parseInt(value) : undefined)}>
               <SelectTrigger>
                 <SelectValue placeholder="Selecione uma localização parente" />
               </SelectTrigger>
@@ -120,8 +120,8 @@ export function LocationForm({ location, onSuccess }: LocationFormProps) {
             <div className="flex items-center space-x-2">
               <Checkbox
                 id="isprovince"
-                checked={watch("isprovince")}
-                onCheckedChange={(checked) => setValue("isprovince", !!checked)}
+                checked={watch("is_province")}
+                onCheckedChange={(checked) => setValue("is_province", !!checked)}
               />
               <Label htmlFor="isprovince">Provincia</Label>
             </div>
@@ -129,8 +129,8 @@ export function LocationForm({ location, onSuccess }: LocationFormProps) {
             <div className="flex items-center space-x-2">
               <Checkbox
                 id="iscapitalcity"
-                checked={watch("iscapitalcity")}
-                onCheckedChange={(checked) => setValue("iscapitalcity", !!checked)}
+                checked={watch("is_capital_city")}
+                onCheckedChange={(checked) => setValue("is_capital_city", !!checked)}
               />
               <Label htmlFor="iscapitalcity">Capital</Label>
             </div>
@@ -138,8 +138,8 @@ export function LocationForm({ location, onSuccess }: LocationFormProps) {
             <div className="flex items-center space-x-2">
               <Checkbox
                 id="ismunicipality"
-                checked={watch("ismunicipality")}
-                onCheckedChange={(checked) => setValue("ismunicipality", !!checked)}
+                checked={watch("is_municipality")}
+                onCheckedChange={(checked) => setValue("is_municipality", !!checked)}
               />
               <Label htmlFor="ismunicipality">Municipio</Label>
             </div>
@@ -147,8 +147,8 @@ export function LocationForm({ location, onSuccess }: LocationFormProps) {
             <div className="flex items-center space-x-2">
               <Checkbox
                 id="isactive"
-                checked={watch("isactive")}
-                onCheckedChange={(checked) => setValue("isactive", !!checked)}
+                checked={watch("is_active")}
+                onCheckedChange={(checked) => setValue("is_active", !!checked)}
               />
               <Label htmlFor="isactive">Activa</Label>
             </div>
