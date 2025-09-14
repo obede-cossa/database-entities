@@ -107,11 +107,11 @@ export function LocationForm({ location, onSuccess }: LocationFormProps) {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="0">Nenhuma</SelectItem>
-                {locations.map((loc) => (
+                {/* {locations.map((loc) => (
                   <SelectItem key={loc.id} value={loc.id.toString()}>
                     {loc.name}
                   </SelectItem>
-                ))}
+                ))} */}
               </SelectContent>
             </Select>
           </div>

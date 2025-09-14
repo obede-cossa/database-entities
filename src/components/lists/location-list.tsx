@@ -111,7 +111,6 @@ export function LocationList({ onSuccess }: LocationListProps) {
             <TableHeader>
               <TableRow>
                 <TableHead>Nome</TableHead>
-                <TableHead>Tipo</TableHead>
                 <TableHead>País</TableHead>
                 <TableHead>Estado/Província</TableHead>
                 <TableHead>Cidade</TableHead>
@@ -123,12 +122,12 @@ export function LocationList({ onSuccess }: LocationListProps) {
               {locations.map((location) => (
                 <TableRow key={location.id}>
                   <TableCell className="font-medium">{location.name}</TableCell>
-                  <TableCell>{location.iscapitalcity}</TableCell>
-                  <TableCell>{location.ismunicipality}</TableCell>
-                  <TableCell>{location.isprovince}</TableCell>
+                  <TableCell>{location.is_capital_city ? "Sim" : "Não"}</TableCell>
+                  <TableCell>{location.is_municipality ? "Sim" : "Não"}</TableCell>
+                  <TableCell>{location.is_province ? "Sim" : "Não"}</TableCell>
                   <TableCell>
-                    <Badge variant={location.isactive ? "default" : "secondary"}>
-                      {location.isactive ? "Ativa" : "Inativa"}
+                    <Badge variant={location.is_active ? "default" : "secondary"}>
+                      {location.is_active ? "Ativa" : "Inativa"}
                     </Badge>
                   </TableCell>
                   <TableCell className="text-right">

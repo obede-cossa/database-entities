@@ -234,7 +234,7 @@ export function EntityForm({ entity, onSuccess }: EntityFormProps) {
                 </SelectTrigger>
                 <SelectContent>
                   {entityStatuses.map((status) => (
-                    <SelectItem key={status.id} value={status.id.toString()}>
+                    <SelectItem key={status.name} value={status.name}>
                       {status.name}
                     </SelectItem>
                   ))}
